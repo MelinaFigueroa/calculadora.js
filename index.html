@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-200">
+
+    <div class="bg-white p-6 rounded-lg shadow-lg w-80">
+        <h1 class="text-2xl font-bold text-center mb-4">Calculadora</h1>
+        <input id="display" type="text" class="w-full text-right p-2 border rounded mb-2 text-xl">
+        
+        <div class="grid grid-cols-4 gap-2">
+            <!-- Botones de la calculadora -->
+            <button class="btn bg-gray-300" onclick="limpiar()">C</button>
+            <button class="btn bg-gray-300" onclick="borrar()">←</button>
+            <button class="btn bg-gray-300" onclick="agregar('/')">/</button>
+            <button class="btn bg-gray-300" onclick="agregar('*')">*</button>
+
+            <button class="btn" onclick="agregar('7')">7</button>
+            <button class="btn" onclick="agregar('8')">8</button>
+            <button class="btn" onclick="agregar('9')">9</button>
+            <button class="btn bg-gray-300" onclick="agregar('-')">-</button>
+
+            <button class="btn" onclick="agregar('4')">4</button>
+            <button class="btn" onclick="agregar('5')">5</button>
+            <button class="btn" onclick="agregar('6')">6</button>
+            <button class="btn bg-gray-300" onclick="agregar('+')">+</button>
+
+            <button class="btn" onclick="agregar('1')">1</button>
+            <button class="btn" onclick="agregar('2')">2</button>
+            <button class="btn" onclick="agregar('3')">3</button>
+            <button class="btn row-span-2 bg-blue-500 text-white" onclick="calcular()">=</button>
+
+            <button class="btn col-span-2" onclick="agregar('0')">0</button>
+            <button class="btn" onclick="agregar('.')">.</button>
+        </div>
+    </div>
+    <script src="calculadora.js"></script>
+</body>
+</html>
